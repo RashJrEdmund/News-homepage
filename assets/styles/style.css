@@ -1,51 +1,177 @@
 body {
   margin: 0;
+	color: #b6b3b3;
 }
 
 nav {
-  background-color: yellowgreen;
+	width: 98vw;
 	max-width: 1224px;
-	margin: auto;
-	padding: 0 10px;
+	margin: 20px auto;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
 nav header {
+	color: #000;
 	font-size: 3rem;
 	font-weight: 800;
-}
-
-nav > div {
-	background-color: brown;
 }
 
 nav button {
 	width: 100px;
 	background-color: #fff;
-	color: #d3d3d3;
+	color: #808080;
 	border: none;
-	font-size: 0.8rem;
+	font-size: 1rem;
 }
 
 /* ENDING THE NAV AND STARTING THE WHOLE SECTION */
 
 .whole {
 	background-color: purple;
+	width: 98vw;
 	max-width: 1224px;
-	display: flex;
-	flex-direction: column;
-	margin: auto;
+	display: grid;
+	margin: 2rem auto;
+	font-family: sans-serif;
 }
 
 .sub-whole {
+	width: 100%;
 	background-color: gold;
 	display: grid;
 	grid-template-columns: 2fr 1fr;
 	gap: 1rem;
 }
 
-.column1, .column2 {
-	background-color: aqua;
+.column1 {
+	height: fit-content;
+}
+
+
+.column1 img {
+	width: 100%;
+}
+
+.sub-whole .column1 > div {
+	background-color: grey;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+	margin: 1.5rem auto;
+}
+
+.column1 > div .sub1 {
+	background-color: green;
+	color: #000;
+	text-transform: capitalize;
+	font-size: 3rem;
+	font-weight: 800;
+	height: fit-content;
+}
+
+.column1 > div .sub2 {
+	background-color: green;
+	display: grid;
+}
+
+.column1 > div .sub2 p {
+	background-color: #f14336;
+	color: #fff;
+	margin-top: 0;
+}
+
+.column1 > div .sub2 button {
+	text-transform: uppercase;
+	background-color: #f14336;
+	color: #fff;
+	width: fit-content;
+	height: 2.5rem;
+	font-size: 1.2rem;
+	border: none;
+	margin-bottom: 0;
+}
+
+.column2 {
+	background-color: #00051b;
+	color: #fff;
+	padding: 20px 10px;
+	height: fit-content;
+	height: fit-content;
+	max-height: 100%;
+}
+
+.column2 > header {
+	text-transform: capitalize;
+	color: #ffd700;
+	font-size: 2.5rem;
+	font-weight: 600;
+	margin-bottom: 10%;
+}
+
+.column2 > div header {
+	text-transform: capitalize;
+	color: #fff;
+	font-size: 1.5rem;
+	font-weight: bolder;
+}
+
+hr {
+	opacity: 0.5;
+	margin: 10% 0;
+}
+
+.whole-foot {
+	background-color: purple;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.whole-foot {
+	background-color: purple;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 10px;
+}
+
+.whole-foot .foot-divs {
+	background-color: brown;
+	display: flex;
+	gap: 1rem;
+}
+
+.foot-divs > div {
+	background-color: purple;
+	position: relative;
+}
+
+.foot-divs img {
+	height: 160px;
+	width: 140px;
+}
+
+.whole-foot .number {
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+}
+
+.whole-foot header {
+	text-transform: capitalize;
+	font-weight: 800;
+	font-size: 1rem;
+	color: #000;
+	margin-bottom: 0.5rem;
+}
+
+.whole-foot p {
+	font-size: 1rem;
+	position: absolute;
+	margin-bottom: 0;
+}
+
+@media only screen and (max-width: 600px){
+	.sub-whole {
+		grid-template-columns: 1fr;
+	}
 }
