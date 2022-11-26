@@ -61,7 +61,8 @@ nav button {
 }
 
 .column1 img {
-	width: 100%;
+  width: 100%;
+  min-height: 250px
 }
 
 .sub-whole .column1 > div {
@@ -206,7 +207,7 @@ hr {
 		width: fit-content;
 		height: 100%;
 		word-wrap: break-word;
-	}
+  }
 }
 
 @media only screen and (max-width: 500px){
