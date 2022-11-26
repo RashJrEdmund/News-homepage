@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+}
+
+nav {
+  background-color: yellowgreen;
+	max-width: 1224px;
+	margin: auto;
+	padding: 0 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav header {
+	font-size: 3rem;
+	font-weight: 800;
+}
+
+nav > div {
+	background-color: brown;
+}
+
+nav button {
+	width: 100px;
+	background-color: #fff;
+	color: #d3d3d3;
+	border: none;
+	font-size: 0.8rem;
+}
+
+/* ENDING THE NAV AND STARTING THE WHOLE SECTION */
+
+.whole {
+	background-color: purple;
+	max-width: 1224px;
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+}
+
+.sub-whole {
+	background-color: gold;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 1rem;
+}
+
+.column1, .column2 {
+	background-color: aqua;
+}
