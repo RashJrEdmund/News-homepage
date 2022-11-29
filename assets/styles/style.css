@@ -10,15 +10,36 @@ nav {
 	max-width: 1224px;
 	margin: 20px auto;
 	display: flex;
+	flex-wrap: nowrap;
 	justify-content: space-between;
 	align-items: center;
 	position: relative;
 }
 
-nav > div {
-	position: absolute;
+nav .img-div {
+  background-color: brown;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 70%;
+  align-items: center;
+}
+
+nav .varying-menu-text {
+	/* position: absolute; */
+  display: flex;
+  justify-content: space-between;
 	right: 0;
+  width: 100%;
 	background-color: purple;
+}
+
+nav img {
+  position: absolute;
+  opacity: 0;
+  right: 0;
+  height: 30px;
+  width: 35px;
 }
 
 nav header {
@@ -211,9 +232,32 @@ hr {
 }
 
 @media only screen and (max-width: 500px){
+  nav .varying-menu-text {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    min-height: fit-content;
+    padding-left: 10px;
+    right: 0;
+    top: -20px;
+    width: 70%;
+    background-color: #fff;
+    color: #000;
+  }
+
+  .varying-menu-text button {
+    background-color: #fff;
+    color: #000;
+  }
+
+  nav img {
+    opacity: 1;
+  }
+
 	.whole-foot {
 		grid-template-columns: repeat(6, 1fr);
-		overflow: scroll;
+		overflow-x: scroll;
 	}
 
 	.whole-foot .foot-divs {
