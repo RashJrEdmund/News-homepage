@@ -36,7 +36,7 @@ nav .varying-menu-text {
 
 nav img {
   position: absolute;
-  opacity: 0;
+  display: none;
   right: 0;
   height: 30px;
   width: 35px;
@@ -252,7 +252,7 @@ hr {
   }
 
   nav img {
-    opacity: 1;
+	display: unset;
   }
 
 	.whole-foot {
