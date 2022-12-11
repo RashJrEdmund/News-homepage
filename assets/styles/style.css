@@ -25,6 +25,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   position: relative;
+  z-index: 1;
 }
 
 nav ul {
@@ -258,7 +259,6 @@ hr {
 
   nav li {
     width: 100px;
-    background-color: #fff;
     color: #808080;
     text-align: left;
     font-size: large;
@@ -266,7 +266,7 @@ hr {
   }
 
   nav img {
-    /* position: fixed; */
+    position: fixed;
     display: unset;
     right: 2.5vw;
     height: 30px;
