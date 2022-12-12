@@ -1,6 +1,12 @@
-let menuImg = document.querySelector('.menu')
+let count = 0;
 
 document.querySelector('.menu').addEventListener('click', () => {
-    document.querySelector(".varying").classList.toggle('active')
-    menuImg.style.heigth = "3300px"
+    count++
+    if(count%2 == 1) {
+        document.querySelector(".varying").classList.toggle('active')
+        document.querySelector(".menu").style.position = 'fixed'
+    } else {
+        document.querySelector(".varying").classList.toggle('active')
+        document.querySelector(".menu").style.position = 'unset'
+    }
 })
