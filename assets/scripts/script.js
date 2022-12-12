@@ -1,5 +1,7 @@
 let count = 0;
 
+/* trie */
+
 document.querySelector('.menu').addEventListener('click', () => {
     count++
     if(count%2 == 1) {
