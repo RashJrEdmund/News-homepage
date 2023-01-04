@@ -3,7 +3,8 @@ const closMenuIcon = document.querySelector('.close-menu')
 const dropDown = document.querySelector('.varying')
 const navBtn = document.querySelectorAll('.nav-btn')
 
-const autoScrollX = (el) => {
+/* // THIS IS SCROLL RIGHT ANIMATION CODE
+    const autoScrollTo = (el) => {
     let currentX = window.pageXOffset
     let targetX = document.querySelector(el).getBoundingClientRect()
     console.log(`this is how far away the ${el} is from the left: ${targetX.x}`)
@@ -19,9 +20,9 @@ window.addEventListener('scroll', (e) => {
     console.log('this is the scrollableHeight', scrollableHeight)
     if (window.scrollY == scrollableHeight) {
         // alert('you at the bottom')
-        autoScrollX('.scroll-to-side')
+        // autoScrollTo('.scroll-to-side')
     }
-})
+}) */
 
 menuIcon.addEventListener('click', () => {
     dropDown.classList.toggle('active')
