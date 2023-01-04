@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -17,13 +21,14 @@ nav header {
 }
 
 nav {
+  background-color: green;
   width: 95vw;
   max-width: 1224px;
+  height: fit-content;
   margin: 20px auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
   z-index: 1;
 }
 
@@ -33,23 +38,29 @@ nav ul {
   margin: 0;
 }
 
+nav .close-menu {
+  display: none;
+}
+
 ul li {
   font-family: sans-serif;
   list-style: none;
   margin: 0 10px;
 }
 
-ul a {
+ul .nav-btn {
   text-decoration: none;
+  color: #000;
+  transition: 0.5s;
+}
+
+ul .nav-btn:hover {
+  background-color: #f14336;
   color: #000;
 }
 
-nav img {
-  position: absolute;
+nav .menu {
   display: none;
-  right: 0;
-  height: 30px;
-  width: 35px;
 }
 
 /* ENDING THE NAV AND STARTING THE WHOLE SECTION */
@@ -81,14 +92,14 @@ nav img {
   min-height: 250px
 }
 
-.sub-whole .column1>div {
+.sub-whole .column1 > div {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
   margin: 1.5rem auto;
 }
 
-.column1>div .sub1 {
+.column1 > div .sub1 {
   color: #000;
   text-transform: capitalize;
   font-size: 3rem;
@@ -96,16 +107,16 @@ nav img {
   height: fit-content;
 }
 
-.column1>div .sub2 {
+.column1 > div .sub2 {
   display: grid;
 }
 
-.column1>div .sub2 p {
+.column1 > div .sub2 p {
   color: #fff;
   margin-top: 0;
 }
 
-.column1>div .sub2 button {
+.column1 > div .sub2 button {
   text-transform: uppercase;
   background-color: #f14336;
   color: #fff;
@@ -114,6 +125,12 @@ nav img {
   font-size: 1.2rem;
   border: none;
   margin-bottom: 0;
+  transition: 0.5s;
+}
+
+.column1 > div .sub2 button:hover {
+  background-color: #000;
+  color: #f14336;
 }
 
 .column2 {
@@ -125,7 +142,7 @@ nav img {
   max-height: 100%;
 }
 
-.column2>header {
+.column2 > header {
   text-transform: capitalize;
   color: #ffd700;
   font-size: 2.5rem;
@@ -133,7 +150,7 @@ nav img {
   margin-bottom: 10%;
 }
 
-.column2>div header {
+.column2 > div header {
   text-transform: capitalize;
   color: #fff;
   font-size: 1.5rem;
@@ -197,7 +214,7 @@ hr {
     grid-template-columns: 1fr;
   }
 
-  .sub-whole .column1>div {
+  .sub-whole .column1 > div {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
@@ -217,7 +234,7 @@ hr {
     width: 100%;
   }
 
-  .foot-divs>div {
+  .foot-divs > div {
     width: fit-content;
     height: 100%;
     word-wrap: break-word;
@@ -226,46 +243,56 @@ hr {
 
 @media only screen and (max-width: 500px) {
   nav {
-    width: 95vw;
-    max-width: 1224px;
-    margin: 20px auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     position: relative;
   }
 
+  .column1 > div .sub2 button:hover {
+    background-color: #f14336;
+    color: #fff;
+  }
+
   .varying {
-    display: none;
+    background-color: burlywood;
+    position: fixed;
+    right: -1000%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: unset;
+    border-left: 1px solid #555;
+    width: 65vw;
+    height: 100vh;
+    padding: 0;
+    padding-right: 10px;
+    transition: 0.5s;
   }
 
   .active {
-    display: unset;
-    background-color: burlywood;
-    border-left: 1px solid #555;
-    position: fixed;
-    flex-direction: column;
-    justify-content: unset;
-    width: 65vw;
-    height: 100vh;
     right: -2.5vw;
-    top: 0;
-    padding: 120px 20px 0;
+  }
+
+  nav .close-menu {
+    display: unset;
+    height: 30px;
+    width: 35px;
+    align-self: flex-end;
+    margin: 30stapx 10px 120px;
   }
 
   nav li {
     width: 100px;
     text-align: left;
     font-size: large;
-    margin: 1rem 0;
   }
 
-  nav img {
+  ul .nav-btn {
+    padding: 1rem 20px;
+  }
+
+  nav .menu {
     display: unset;
-    right: 2.5vw;
     height: 30px;
     width: 35px;
-    z-index: 2;
   }
 
   .whole-foot {
@@ -286,7 +313,7 @@ hr {
     width: 50%;
   }
 
-  .foot-divs>div {
+  .foot-divs > div {
     width: 100%;
     height: 100%;
     word-wrap: break-word;

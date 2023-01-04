@@ -1,14 +1,18 @@
-let count = 0;
+const menuIcon = document.querySelector('.menu')
+const closMenuIcon = document.querySelector('.close-menu')
+const dropDown = document.querySelector('.varying')
+const navBtn = document.querySelectorAll('.nav-btn')
 
-/* trie */
+menuIcon.addEventListener('click', () => {
+    dropDown.classList.toggle('active')
+})
 
-document.querySelector('.menu').addEventListener('click', () => {
-    count++
-    if(count%2 == 1) {
-        document.querySelector(".varying").classList.toggle('active')
-        document.querySelector(".menu").style.position = 'fixed'
-    } else {
-        document.querySelector(".varying").classList.toggle('active')
-        document.querySelector(".menu").style.position = 'unset'
-    }
+closMenuIcon.addEventListener('click', () => {
+    dropDown.classList.toggle('active')
+})
+
+navBtn.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        dropDown.classList.remove('active')
+    })
 })
