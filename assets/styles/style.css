@@ -254,7 +254,7 @@ hr {
   .varying {
     background-color: burlywood;
     position: fixed;
-    right: -1000%;
+    right: -100%;
     top: 0;
     display: flex;
     flex-direction: column;
