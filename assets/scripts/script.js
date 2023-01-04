@@ -2,13 +2,12 @@ const menuIcon = document.querySelector('.menu')
 const closMenuIcon = document.querySelector('.close-menu')
 const dropDown = document.querySelector('.varying')
 const navBtn = document.querySelectorAll('.nav-btn')
-const animeDiv = document.querySelector('.scroll-to-side')
 
 const autoScrollX = (el) => {
     let currentX = window.pageXOffset
-    let targetX = document.getElementById(el)
-        .getBoundingClientRect()
-    console.log(`this is how far away the ${el} is from the left: ${targetX}`)
+    let targetX = document.querySelector(el).getBoundingClientRect()
+    console.log(`this is how far away the ${el} is from the left: ${targetX.x}`)
+    let bodyHeight = document.body.offsetHeight
 }
 
 window.addEventListener('scroll', (e) => {
