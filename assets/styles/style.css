@@ -321,6 +321,7 @@ hr {
     height: fit-content;
     width: 80vw;
     margin: auto;
+    padding-right: 5px;
   }
 
   .whole-foot .foot-divs:nth-of-type(1) {
